@@ -8,8 +8,7 @@
 2)==> select cname,rating from CUSTOMER where cnum in(
 	  select cnum from ORDERS group by Cnum having count(*)>1);
 
-select max(SUM_) from
-(select cnum,sum(amt) SUM_ from ORDERS group by cnum as temp;
+3)==> select snum,sum(amt) sum_amt from ORDERS group by snum having sum_amt>(select max(amt) from ORDERS);
 
 
 
