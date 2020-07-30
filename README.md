@@ -13,4 +13,8 @@
 ### Assignment 10
 ### Assignment 11
 ### Assignment 12
+### Assignment 13
+### Assignment 14
+### Assignment 15
+### Assignment 19
 
