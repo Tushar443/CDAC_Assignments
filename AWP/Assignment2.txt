@@ -1,0 +1,156 @@
+// External CSS and Move Blocks and Move Element
+//text- styling
+
+
+@@@@@ HTML File
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice1_css.css">
+</head>
+<body>
+    <div style="display: flex;">
+        <div style="background: cyan; text-align: center;" class="common_div">
+            Tushar
+        </div>
+        <div style="background:rgb(77, 64, 32); text-align: center;" class="common_div">
+            More
+        </div>
+        
+    </div>
+    <br/>
+    <span style="background: red;">
+        line 1
+    </span>
+    <span style=" background:rebeccapurple">
+        line 2
+    </span>
+</body>
+</html>
+
+@@@@@ CSS
+
+.common_div{
+    height: 50vh;
+    background: black;
+    flex: 1;
+    font-size: 50px;
+     justify-content: center;
+     align-items: center;
+     border: 5px solid black;
+     border-radius: 15px;
+     margin-left: 16px;
+     font-family: 'Times New Roman', Times, serif;
+
+     
+}
+
+//Padding and Marging
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .common_div{
+        height: 50vh;
+         text-align: center; 
+        color: rgb(23,34,33); 
+        background: red;
+        padding: 20px;
+        margin-left: 5px; 
+        flex :1;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display :flex; justify-content: center; align-items: center;">
+        <div 
+        style="background: red;
+        display :flex; 
+        justify-content: center; 
+        align-items: center;"
+        class="common_div" >
+            Line 1
+        </div>
+        <div 
+        style="background: rebeccapurple;
+        display :flex; 
+        justify-content: center;
+        align-items: center;" 
+        class="common_div">
+            Line 2
+        </div>
+    </div>
+    <div 
+    style="display: flex;
+    justify-content: center; 
+    align-items: center;">
+        <div 
+        style="background:greenyellow;
+        display :flex;
+        justify-content: 
+        center; align-items: 
+        center;" 
+        class="common_div" >
+            Line 3
+        </div>
+        <div 
+        style="background:green;
+        display :flex; 
+        justify-content: 
+        center; align-items: 
+        center;" 
+        class="common_div">
+            Line 4
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+//Flex Fundamental and Divide Screen 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice4</title>
+    <style>
+        .child{
+            height: 50px;
+            display: flex; 
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+}
+    </style>
+    
+</head>
+<body>
+    <div style="display: flex;
+        background: red; height: 300px; justify-content: center; align-items: center;">
+        <div style=" background-color: seagreen;" class="child">
+         A</div>
+        <div 
+        style="background: seashell;" class="child">B</div>
+        <div style="background: skyblue;" class="child">C</div>
+    </div>
+
+<!-- <div class="par">
+        <div style=" background-color: seagreen;" class="child">A</div>
+        <div style="background: seashell;" class="child">B</div>
+        <div style="background: skyblue;" class="child">C</div>
+    </div> -->
+</body>
+</html> 
+
+

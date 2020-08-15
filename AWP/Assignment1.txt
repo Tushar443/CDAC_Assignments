@@ -1,0 +1,120 @@
+// Inline and Internal Styling
+//HTML Syntax
+//CSS selectors-Eelements,ID,Class
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .common_div{
+        	height: 50vh;
+         	text-align: center; 
+        	color: rgb(23,34,33); 
+        	background: red;
+        	padding: 20px;
+        	margin-left: 5px; 
+        	flex :1;
+        }
+	#Div4{
+		background:green;
+        	display :flex; 
+        	justify-content: 
+        	center; align-items: center;
+	}
+	div{
+		background: red;
+	}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display :flex; justify-content: center; align-items: center;">
+        <div 
+        style="background: red;
+        display :flex; 
+        justify-content: center; 
+        align-items: center;"
+        class="common_div" >
+            Line 1
+        </div>
+        <div 
+        style="background: rebeccapurple;
+        display :flex; 
+        justify-content: center;
+        align-items: center;" 
+        class="common_div">
+            Line 2
+        </div>
+    </div>
+    <div 
+    style="display: flex;
+    justify-content: center; 
+    align-items: center;">
+        <div 
+        style="background:greenyellow;
+        display :flex;
+        justify-content: 
+        center; align-items: 
+        center;" 
+        class="common_div" >
+            Line 3
+        </div>
+        <div 
+        id="Div4" 
+        class="common_div">
+            Line 4
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+//Move Image element across the division area
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background: brown; height: 500px; width: 80%;">
+    <img src="s1.jpg" alt="404 Not Found" style="height: 100%; width: 100%; object-fit: cover;">
+    </div>
+</body>
+</html>
+
+
+//CSS Flex -Move text element across the division
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice1_css.css">
+</head>
+<body>
+    <div style="display: flex;">
+        <div style="background: cyan; display: flex; justify-content: center; align-content: center;" class="common_div">
+            Tushar
+        </div>
+        <div style="background:rgb(77, 64, 32); display: flex; justify-content: center; align-content: center;" class="common_div">
+            More
+        </div>
+        
+    </div>
+    <br/>
+    <span style="background: red;">
+        line 1
+    </span>
+    <span style=" background:rebeccapurple">
+        line 2
+    </span>
+</body>
+</html>

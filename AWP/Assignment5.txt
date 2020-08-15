@@ -1,0 +1,156 @@
+// Button Event
+// HTML File
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Practice9.js"></script>
+</head>
+<body>
+    <div>
+        <div>Hello World</div>
+        <div></div>
+        <div>Hello Tushar</div>
+        <button onclick="Change1stChild()">Click me</button>
+    </div>
+</body>
+</html>
+
+
+JS File
+
+function Change1stChild(){
+    let temp =document.querySelector("div").children[1];
+    temp.innerHTML='Hello Prakash';  
+}
+
+function Change1stChild(){
+    let temp =document.querySelector("div").children[1];
+    temp.innerHTML='Hello Prakash';  
+}
+
+
+
+//Image Like And HardCoded Comment
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Practice10.js"></script>
+</head>
+<body>
+    <div id="Main">
+        <img src="Sample.png" style="object-fit: cover; height: 300px;" alt="">
+        <div id="Parent" style="display: flex;align-items: center;">
+            <button onclick="ClickLike()" 
+            id="Like" 
+            style="font-size: 20px;">Like 0</button>
+            <button onclick="ClickComment()" 
+            id="Comment"    
+            style="font-size: 20px;">Comment 0</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+//JS File
+
+let count =0;
+let comm=0;
+function ClickLike(){
+    let temp =document.querySelector('#Like');
+    count++;
+    temp.innerHTML="Like "+count; 
+}
+
+function ClickComment(){
+    comm++;
+    const comment_child=document.querySelector('#Comment');
+    comment_child.innerHTML='Comment ' + comm;
+
+
+    let newElement=document.createElement('div');
+    newElement.innerHTML='<br>'+'The comment no: ' + comm;
+    newElement.style.color='white';
+    newElement.style.background='red';
+    newElement.style.margin="4px";
+    newElement.style.width='33%';
+    const parent= document.querySelector('#Main');
+    parent.appendChild(newElement);
+}
+
+
+// Image and Dynamic Comment
+
+HTML File
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Practice11.js"></script>
+</head>
+<body>
+    <div id="Main">
+        <img src="Sample.png" style="object-fit: cover; height: 300px;" alt="">
+        <div id="Parent" style="display: flex;align-items: center;">
+            <button onclick="ClickLike()" 
+            id="Like" 
+            style="font-size: 20px;">Like 0</button>
+            <p>Enter your Comment Here</p>
+            <input type="text" id="commentInput">
+            <button onclick="ClickComment()" 
+            id="Comment"    
+            style="font-size: 20px;">Comment 0</button>
+        </div>
+        <div id="Additional">
+            <!-- <button id="delete">Delete</button> -->
+        </div>
+    </div>
+</body>
+</html>
+
+
+JS File
+
+let count =0;
+let comm=0;
+function ClickLike(){
+    let temp =document.querySelector('#Like');
+    count++;
+    temp.innerHTML="Like "+count; 
+}
+
+function ClickComment(){
+    comm++;
+    const comment_child=document.querySelector('#Comment');
+    comment_child.innerHTML='Comment ' + comm;
+
+
+    let newComment=document.querySelector('#commentInput').value;
+    let newElement=document.createElement('div');
+    let newdiv=document.createElement('div');
+    let newdelete =document.createElement('button');
+    newdelete.innerHTML='Delete';
+    newdiv.innerHTML=newComment;
+    newElement.appendChild(newdiv);
+    newElement.appendChild(newdelete);
+    newElement.style.display='flex';
+    newElement.style.justifyContent='space-between';
+    newElement.style.color='white';
+    newElement.style.background='red';
+    newElement.style.margin="4px";
+    newElement.style.width='33%';
+    const parent= document.querySelector('#Additional');
+    // parent.appendChild(newElement);
+    parent.insertBefore(newElement,parent.firstChild);
+}

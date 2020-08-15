@@ -1,0 +1,293 @@
+
+//Normal Calculator Addition Subtraction Division Multiplication
+
+html FIle
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="calci.js"></script>
+</head>
+<body>
+    <div>
+        <p>1st Parameter</p>
+        <input id="Para1" type="number">
+        <p>2nd Parameter</p>
+        <input id="Para2" type="number">
+        <button onclick="Addition()">+</button>
+        <button onclick="Subtraction()">-</button>
+        <button onclick="Multiplication()">*</button>
+        <button onclick="Division()">/</button>
+        <button onclick="Answer()">Submit</button>        
+    </div>
+
+    <div id="Output">
+        <p>Output</p>
+        <div></div>
+    </div>
+
+</body>
+</html>
+
+JS FIle
+
+var ParameterOne=document.querySelector('#Para1').value ;
+var ParameterTwo =document.querySelector('#Para2').value;
+
+
+var output=0;
+
+
+function Addition(){
+    var ParameterOne=document.querySelector('#Para1').value;
+var ParameterTwo =document.querySelector('#Para2').value;
+    output=Number(ParameterOne)+Number(ParameterTwo);
+}
+
+function Subtraction(){
+    var ParameterOne=document.querySelector('#Para1').value;
+var ParameterTwo =document.querySelector('#Para2').value;
+    output=ParameterOne-ParameterTwo;
+}
+
+function Multiplication(){
+    var ParameterOne=document.querySelector('#Para1').value;
+var ParameterTwo =document.querySelector('#Para2').value;
+    output=ParameterOne*ParameterTwo;
+}
+
+function Division() {
+    var ParameterOne=document.querySelector('#Para1').value;
+var ParameterTwo =document.querySelector('#Para2').value;
+    output=ParameterOne/ParameterTwo;
+}  
+function Answer(){
+    let output_element =document.querySelector('#Output');
+    let newElement=document.createElement('div');
+
+    newElement.innerHTML=output;
+
+    output_element.appendChild(newElement);
+
+}
+
+
+
+
+// Binary Calculator
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Calculator</title>
+    <link rel="stylesheet" href="binaryCalculator.css">
+    <script src="binaryCalculator.js"></script>
+</head>
+<body style="width: 33%;">
+    <div id="main">
+        <div id="res"></div>
+        <div id="btns">
+            <div id="Zero">
+                <div onclick="clickzero()" class="Allbtn" id="btn0">0</div>
+                <div onclick="clickone()" class="Allbtn" id="btn1">1</div>
+                <div onclick="clickclr()" class="Allbtn" id="btnClr">C</div>
+                <div onclick="clickeql()" class="Allbtn" id="btnEql">=</div>
+            </div>
+            <div id="One">
+                <div onclick="clicksum()" class="Allbtn" id="btnSum">+</div>
+                <div onclick="clicksub()" class="Allbtn" id="btnSub">-</div>
+                <div onclick="clickmul()" class="Allbtn" id="btnMul">*</div>
+                <div onclick="clickdiv()" class="Allbtn" id="btnDiv">/</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+JS FIle
+
+let sample="";
+
+function clickzero(){
+    let temp=document.querySelector("#res");
+    sample=sample+'0';
+    temp.innerHTML=sample;
+}
+
+function clickone(){
+    let temp=document.querySelector("#res");
+    sample=sample+'1';
+    temp.innerHTML=sample;
+}
+function clickclr(){
+    let temp=document.querySelector("#res");
+    sample="";
+    temp.innerHTML=sample;
+}
+function clickeql(){
+    
+}
+function clicksum(){
+    let temp=document.querySelector("#res");
+    sample=sample+'+';
+    temp.innerHTML=sample;
+}
+function clicksub(){
+    let temp=document.querySelector("#res");
+    sample=sample+'-';
+    temp.innerHTML=sample;
+}
+function clickmul(){
+    let temp=document.querySelector("#res");
+    sample=sample+'*';
+    temp.innerHTML=sample;
+}
+function clickdiv(){
+    let temp=document.querySelector("#res");
+    sample=sample+'/';
+    temp.innerHTML=sample;
+}
+
+
+
+//Number Calculator
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+    <script src="Calculator.js"></script>
+</head>
+<body style="width: 33%;">
+    <div id="main">
+        <div id="res"></div>
+        <div id="btns">
+            <div id="Zero">
+                <div onclick="clickzero()" class="Allbtn" id="btn0">0</div>
+                <div onclick="clickone()" class="Allbtn" id="btn1">1</div>
+                <div onclick="clicktwo()" class="Allbtn" id="btn0">2</div>
+                <div onclick="clickthree()" class="Allbtn" id="btn1">3</div>
+                <div onclick="clickfour()" class="Allbtn" id="btn0">4</div>
+                <div onclick="clickfive()" class="Allbtn" id="btn1">5</div>
+                <div onclick="clicksix()" class="Allbtn" id="btn0">6</div>
+                <div onclick="clickseven()" class="Allbtn" id="btn1">7</div>
+                <div onclick="clickeight()" class="Allbtn" id="btn0">8</div>
+                <div onclick="clicknine()" class="Allbtn" id="btn0">9</div>
+
+            </div>
+            <div id="One">
+                <div onclick="clicksum()" class="Allbtn" id="btnSum">+</div>
+                <div onclick="clicksub()" class="Allbtn" id="btnSub">-</div>
+                <div onclick="clickmul()" class="Allbtn" id="btnMul">*</div>
+                <div onclick="clickdiv()" class="Allbtn" id="btnDiv">/</div>
+                <div onclick="clickclr()" class="Allbtn" id="btnClr">C</div>
+                <div onclick="clickeql()" class="Allbtn" id="btnEql">=</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+JS FIle
+
+let sample="";
+
+function clickzero(){
+    let temp=document.querySelector("#res");
+    sample=sample+'0';
+    temp.innerHTML=sample;
+}
+function clickone(){
+    let temp=document.querySelector("#res");
+    sample=sample+'1';
+    temp.innerHTML=sample;
+}
+
+function clicktwo(){
+    let temp=document.querySelector("#res");
+    sample=sample+'2';
+    temp.innerHTML=sample;
+}
+function clickthree(){
+    let temp=document.querySelector("#res");
+    sample=sample+'3';
+    temp.innerHTML=sample;
+}
+
+function clickfour(){
+    let temp=document.querySelector("#res");
+    sample=sample+'4';
+    temp.innerHTML=sample;
+}
+function clickfive(){
+    let temp=document.querySelector("#res");
+    sample=sample+'5';
+    temp.innerHTML=sample;
+}
+
+function clicksix(){
+    let temp=document.querySelector("#res");
+    sample=sample+'6';
+    temp.innerHTML=sample;
+}
+function clickseven(){
+    let temp=document.querySelector("#res");
+    sample=sample+'7';
+    temp.innerHTML=sample;
+}
+
+function clickeight(){
+    let temp=document.querySelector("#res");
+    sample=sample+'8';
+    temp.innerHTML=sample;
+}
+function clicknine(){
+    let temp=document.querySelector("#res");
+    sample=sample+'9';
+    temp.innerHTML=sample;
+}
+function clickclr(){
+    let temp=document.querySelector("#res");
+    sample="";
+    temp.innerHTML=sample;
+}
+function clickeql(){
+    let temp=document.querySelector("#res").value;
+
+
+    console.log(temp);
+
+    
+}
+function clicksum(){
+    let temp=document.querySelector("#res");
+    sample=sample+'+';
+    temp.innerHTML=sample;
+}
+function clicksub(){
+    let temp=document.querySelector("#res");
+    sample=sample+'-';
+    temp.innerHTML=sample;
+}
+function clickmul(){
+    let temp=document.querySelector("#res");
+    sample=sample+'*';
+    temp.innerHTML=sample;
+}
+function clickdiv(){
+    let temp=document.querySelector("#res");
+    sample=sample+'/';
+    temp.innerHTML=sample;
+}

@@ -1,0 +1,113 @@
+//DOM Fundamental Practice
+
+// Increment Decrement
+
+@@@@@@@@@@@@@@HTML File
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment</title>
+    <script src="Practice7.js"></script>
+</head>
+<body>
+        <div style="display: flex; flex-direction: column; height: 50px;background: burlywood;width: 50%;">
+            <div  class ="Dis" style="display: flex;
+            font-size: 40px; 
+            justify-content: center
+            ;align-items: center;">0</div>
+            <div style="display: flex;">
+                <div >
+                    <button onclick="Increment()">Increment</button></div>
+                <div>
+                <button onclick="Decrement()">Decrement</button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+
+
+@@@@@@@@@@@@JS File
+
+let count=0;
+function Increment(){
+    let temp= document.querySelector(".Dis");
+    temp.innerHTML=count+1;
+    count++;
+}
+function Decrement(){
+    let temp =document.querySelector(".Dis");
+    temp.innerHTML=count-1;
+    count--;
+}
+
+
+
+// 2 Change Inner Text onMouseOver
+
+HTML File 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Practice8.js"></script>
+</head>
+<body>
+      <div id="Main" onmouseover="changeBackground()" onmouseout="changeBackgroundOut()" style="font-size: 50px; background: rosybrown;">Hello World</div>
+</body>
+</html>
+
+
+JS File
+
+
+function changeBackground(){
+let temp =document.querySelector("#Main");
+temp.style.color='red';
+temp.style.background ="green";
+temp.innerHTML='Hello Tushar';
+}
+function changeBackgroundOut(){
+    let temp =document.querySelector("#Main");
+    temp.style.color='black';
+    temp.style.background ="rosybrown";  
+    temp.innerHTML='Hello World'; 
+}
+
+
+// 3 Change First Child 
+
+HTML File
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Practice9.js"></script>
+</head>
+<body>
+    <div>
+        <div>Hello World</div>
+        <div></div>
+        <div>Hello Tushar</div>
+        <button onclick="Change1stChild()">Click me</button>
+    </div>
+</body>
+</html>
+
+@@@ JS File
+
+function Change1stChild(){
+    let temp =document.querySelector("div").children[1];
+    temp.innerHTML='Hello Prakash';  
+}
+
+

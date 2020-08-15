@@ -1,0 +1,56 @@
+1) Anonymous Function
+
+let f1 =function(a,b){
+    return a+b;
+}
+
+// Call The Function
+
+console.log(f1(3+4));
+
+Output ==> 7
+
+
+2) Synonymous Function
+
+function f2(){
+    return "Hello World";
+}
+
+console.log(f2());
+
+Output ==> Hello World
+
+
+
+3) Arrow Function 
+
+let f3=(a,b)=>{
+    return a*b;
+}
+
+console.log(f3(5*6));
+
+Output ==> 30
+
+
+
+4) function example1()
+{
+    console.log("1");
+    console.log("2");
+    console.log("4");
+    setTimeout(()=> {
+        console.log("3. I am callback")
+    },5000);
+    console.log("5");
+
+}
+undefined
+
+o/p->1
+     2
+     4
+     5
+     3. I am callback
+     
