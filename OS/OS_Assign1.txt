@@ -5,7 +5,6 @@ Q1. Explore the following commands with various options, refer man pages for
     seq i) clear
 
 DATE COMMAND
-
 thunder@thunderstrom:~$ date
 Tue Sep  8 16:31:34 IST 2020
 thunder@thunderstrom:~$ date +%a
@@ -25,7 +24,6 @@ thunder@thunderstrom:~$ date +%f(it will not give us any output)
 thunder@thunderstrom:~$ date +%F
 2020-09-08
 thunder@thunderstrom:~$ date +%t(it will not give us any output)
-
 thunder@thunderstrom:~$ date +%T
 16:34:10
 thunder@thunderstrom:~$ date +%B" "+%d" "+%y
@@ -43,7 +41,6 @@ September 08 20 16:36:57
 
 
 CALENDAR COMMAND
-
 thunder@thunderstrom:~$ cal
    September 2020
 Su Mo Tu We Th Fr Sa
@@ -52,7 +49,6 @@ Su Mo Tu We Th Fr Sa
 13 14 15 16 17 18 19
 20 21 22 23 24 25 26
 27 28 29 30
-
 thunder@thunderstrom:~$ cal sep 2020
    September 2020
 Su Mo Tu We Th Fr Sa
@@ -146,7 +142,6 @@ Su Mo Tu We Th Fr Sa
 
 
 ECHO COMMAND
-
 thunder@thunderstrom:~$ echo Tushar
 Tushar
 thunder@thunderstrom:~$ echo Tushar More
@@ -165,7 +160,6 @@ WHOAMI COMMAND
 
 thunder@thunderstrom:/$ whoami
 Tushar
-
 thunder@thunderstrom:/$ whoami --version
 whoami (GNU coreutils) 8.30
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -178,8 +172,7 @@ thunder@thunderstrom:/$ whoami --help
 Usage: whoami [OPTION]...
 Print the user name associated with the current effective user ID.
 Same as id -un.
-
-      --help     display this help and exit
+      --help    display this help and exit
       --version  output version information and exit
 
 GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
@@ -189,7 +182,6 @@ or available locally via: info '(coreutils) whoami invocation'
 
 
 UNAME COMMAND
-
 thunder@thunderstrom:/$ uname
 Linux
 thunder@thunderstrom:/$ uname -a
@@ -213,7 +205,6 @@ GNU/Linux
 
 
 #SEQUENCE COMMAND
-
 thunder@thunderstrom:/$ seq 8
 1
 2
@@ -223,7 +214,6 @@ thunder@thunderstrom:/$ seq 8
 6
 7
 8
-
 thunder@thunderstrom:/$ seq 3 22
 3
 4
@@ -245,7 +235,6 @@ thunder@thunderstrom:/$ seq 3 22
 20
 21
 22
-
 thunder@thunderstrom:/$ seq 3 2 35
 3
 5
@@ -264,7 +253,6 @@ thunder@thunderstrom:/$ seq 3 2 35
 31
 33
 35
-
 thunder@thunderstrom:/$ seq -s " " 10
 1 2 3 4 5 6 7 8 9 10
 
@@ -285,18 +273,15 @@ thunder@thunderstrom:/$ seq -w 10
 08
 09
 10
-
 thunder@thunderstrom:/$ seq -w 10 40 120
 010
 050
 090
-
 thunder@thunderstrom:/$ seq -w 10 40 130
 010
 050
 090
 130
-
 
 
 Q2.A) Create three directory a b and c and create a.txt,b.txt and c.txt
@@ -486,7 +471,6 @@ thunder@thunderstrom:~$ ls -a
 d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
 
 
-
 e) Recursive display contents of your home directory.
 thunder@thunderstrom:/$ ls -lrS
 total 580
@@ -537,8 +521,6 @@ drwxrwxrwx 1 Tushar Tushar 4096 Sep  9 18:01 ravi
 -rw-rw-rw- 1 Tushar Tushar    6 Sep  9 19:00 su
 
 
-
-
 g) display attributes of a directory using ls -ld
 thunder@thunderstrom:~$ ls -lD
   total 0
@@ -580,7 +562,6 @@ Contents of file d.sh:
 #/bin/sh
 ls -lh
 thunder@thunderstrom:~/Tushar$ vi d.sh
-
 
 Q2. Change the permission of the previous directory to executable only.
 Analyze the output.
@@ -725,5 +706,3 @@ groupadd: cannot lock /etc/group; try again later.
 thunder@thunderstrom:~$ rm -r a b
 thunder@thunderstrom:~$ ls
 Tushar  file.txt  file1.txt  file2.txt  file3.txt  file4.txt  file5.txt  kuru  movies
-
-
