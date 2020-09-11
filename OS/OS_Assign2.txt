@@ -1,0 +1,34 @@
+Write a script to create 10 directories, say a1,a2,...,a10
+Report error if a directory/file exists with the same name.
+for ((i=1;i<=10;i++))
+do
+        mkdir "a$i"
+done
+
+
+2.Write a menu based script to perform following string operations
+a) To find length of a string
+str="Subham"
+echo :wq
+echo len=${#str}
+
+c) Copying string
+str="Subham"
+echo "abc=$str"
+
+d) Concatenation of strings
+
+str1="Tushar"
+str2="More\n"
+str3="subham"
+str4="singh\"
+echo -e str5= $str1 $str2  $str3 $str4
+
+e) Compare two strings
+str1="subham"
+str2="subham"
+if(($str1 = $str2)); then
+echo "equal"
+else
+echo "not equal"
+fi

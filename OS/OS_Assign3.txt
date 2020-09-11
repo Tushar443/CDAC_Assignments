@@ -1,0 +1,36 @@
+Create different types of Files.
+
+thunder@thunderstrom:~$ touch a1.text
+thunder@thunderstrom:~$ touch A1.text
+thunder@thunderstrom:~$ touch A!.Text
+-bash: !.Text: event not found
+thunder@thunderstrom:~$ touch A1.Text
+thunder@thunderstrom:~$ touch A1.TEXT
+
+
+thunder@thunderstrom:~$ touch A1.text.text
+thunder@thunderstrom:~$ touch A1.text.html
+thunder@thunderstrom:~$ cat >A1.text.js
+this file is created using cat command
+
+thunder@thunderstrom:~$ ls
+A1.TEXT  A1.Text  A1.text  A1.text.html  A1.text.js  A1.text.text  a1.text
+thunder@thunderstrom:~$ touch .a1.text
+
+thunder@thunderstrom:~$ touch .b1
+thunder@thunderstrom:~$ ls -l
+total 0
+-rw-rw-rw- 1 thunder thunder  0 Sep  7 20:50 A1.TEXT
+-rw-rw-rw- 1 thunder thunder  0 Sep  7 20:50 A1.Text
+-rw-rw-rw- 1 thunder thunder  0 Sep  7 20:49 A1.text
+-rw-rw-rw- 1 thunder thunder  0 Sep  7 20:53 A1.text.html
+-rw-rw-rw- 1 thunder thunder 39 Sep  7 20:54 A1.text.js
+-rw-rw-rw- 1 thunder thunder  0 Sep  7 20:52 A1.text.text
+-rw-rw-rw- 1 thunder thunder  0 Sep  7 20:49 a1.text
+thunder@thunderstrom:~$ ls -a
+.   .a1.text  .bash_history  .bashrc     .motd_shown  .sudo_as_admin_successful  A1.Text  A1.text.html  A1.text.text
+..  .b1       .bash_logout   .landscape  .profile     A1.TEXT                    A1.text  A1.text.js    a1.text
+
+thunder@thunderstrom:~$ touch A1.text.html.js.cpp
+thunder@thunderstrom:~$ ls
+A1.TEXT  A1.Text  A1.text  A1.text.html  A1.text.html.js.cpp  A1.text.js  A1.text.text  a1.text
