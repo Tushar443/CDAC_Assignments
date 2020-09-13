@@ -14,34 +14,30 @@ d) Concatenation of strings
 e) Compare two strings
 f) Reversing a string
    
-   do
-        echo '1.Find length'
-        echo '2.Copying string'
-        echo '3.Concate of string'
-        echo '4.compare to sring'
-        echo '5.Reverse string'
-		read str1
-		read option
-		case $option in
-        1) echo ${#str1}
-                ;;
-
-        2) str2=$str1
-        echo $str2
-          ;;
-        3)str2="Mahajan"
-                echo $str1$str2
-                ;;
-        4) str2="Meghana"
-        if [ $str1 == $str2 ]
-        then
-          echo "Equal"
-        else
-            echo "Not equal"
-        fi
-            ;;
-        5) echo $str1 | rev
-                ;;
+ echo "Enter the string"
+read str flag=true;
+while $flag 
+do 
+echo "1)length"
+echo "2)copy" 
+echo "3)concat" 
+echo "4)compare" 
+echo "5)rev" 
+read x;
+case $x in 
+  1) echo "${#str}";;
+  2)
+     echo $str str2=$str
+     echo $str2 ;; 
+  3) echo "Enter the string" 
+     read str1
+     echo "$str$str1";; 
+  4) echo "Enter the string for comparision" read str1
+     if (($str=$str1)) then echo "Match" else echo "Not match" fi ;;
+  5)echo $str | rev;; 
+  *) echo "You exit from game" flag=false;; 
+esac
+ done 
   
 3. 
 
