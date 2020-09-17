@@ -1,34 +1,256 @@
-Write a script to create 10 directories, say a1,a2,...,a10
-Report error if a directory/file exists with the same name.
-for ((i=1;i<=10;i++))
+  echo "Enter a number"
+  read num
+  for((i=1 ;i<=num; i++))
+  do
+          mkdir a$i
+  done
+
+
+2)
+
+a) To find length of a string
+c) Copying string
+d) Concatenation of strings
+e) Compare two strings
+f) Reversing a string
+   
+ echo "Enter the string"
+read str flag=true;
+while $flag 
+do 
+echo "1)length"
+echo "2)copy" 
+echo "3)concat" 
+echo "4)compare" 
+echo "5)rev" 
+read x;
+case $x in 
+  1) echo "${#str}";;
+  2)
+     echo $str str2=$str
+     echo $str2 ;; 
+  3) echo "Enter the string" 
+     read str1
+     echo "$str$str1";; 
+  4) echo "Enter the string for comparision" read str1
+     if (($str=$str1)) then echo "Match" else echo "Not match" fi ;;
+  5)echo $str | rev;; 
+  *) echo "You exit from game" flag=false;; 
+esac
+ done 
+  
+3. 
+
+   for((i=1;i<10;i++))
+   do
+           mv a$i abbbb$i
+   done
+
+4.
+   echo "Path = $PATH"  
+   echo "Shell = $SHELL"
+   echo "History = $HISTORY"
+   echo "Logname = $LOGNAME"
+   echo "Term = $TERM"
+  
+5.
+
+  ls -la | cut -b 1-10
+  ls -la | cut -c 1-10
+
+6.
+	ls -l | awk '{ print $1 }' 
+
+
+7.
+
+
+	for i in *
+	do
+		if [ -e $i ]
+		then
+			file=`ls -l $i | awk '{print $5}'`
+			if (( $file > 5000 ))
+			then
+				ls -l $i
+			fi 
+		fi
+	done
+	
+
+1.  year is leap or not.
+
+	echo 'Enter a year : '
+	read year
+	if (( $year%4 == 0 && $year%100 != 0 || $year%400 == 0))
+	then
+		echo 'Leap Year'
+	else
+		echo 'Not a Leap Year'
+	fi
+
+
+2. print day of the week using 
+	
+	echo 'Enter the no of Day : '
+	read day
+
+	if [ $day == 1 ]
+	then
+		echo 'Sunday'
+	elif [ $day == 2 ]
+	then
+		echo 'Monday'
+	elif [ $day == 3 ]
+	then
+		echo 'Tuesday'
+	elif [ $day == 4 ]
+	then
+		echo 'Wednesday'
+	elif [ $day == 5 ]
+	then
+		echo 'Thrusday'
+	elif [ $day == 6 ]
+	then
+		echo 'Friday'
+	elif [ $day == 7 ]
+	then
+		echo 'Saturday'
+	else
+		echo 'Invalid Entry'
+	fi
+
+3. a) Write a script to find biggest of three no.s
+   b) To find avg of 3 no.s, read no.s from keyboard
+   
+	echo 'Enter num1 : '
+	read num1
+	echo 'Enter num2 : '
+	read num2
+	echo 'Enter num3 : '
+	read num3
+
+	if (( num1 > num2 && num1 > num3 ))
+	then
+		echo $num1
+	elif (( num2 > num1 && num2 > num3 ))
+	then
+		echo $num2
+	else
+		echo $num3
+	fi
+
+4.even or odd
+
+	echo 'Enter a number : '
+	read num
+
+	if (( num%2 == 0 ))
+	then 
+		echo $num 'is Even.'
+	else
+		echo $num 'is Odd.'
+	fi
+
+5. print calendar of current month in next year,previous years.
+	For eg:-sep 2014,sep 2012 if current month is sep 2013	
+	
+
+	mon=$(date | awk '{print $3}')
+	year=$(date | awk '{print $4}')
+
+	let "prev=year-1" "next=year+1"
+
+	cal $mon $prev
+	cal $mon $year
+	cal $mon $next
+
+6.sum and product of two no.s using 
+	a) let 
+	b)expr
+	c)bc	
+	
+
+	echo 'Enter num1 : '
+	read num1
+	echo 'Enter num2 : '
+	read num2
+	echo 'Enter num3 : '
+	read num3
+
+	(( avg = (( $num1+$num2+$num3 ))/3 ))
+	echo 'Average : '$avg
+
+	echo 'Enter num1 : '
+	read num1
+	echo 'Enter num2 : '
+	read num2
+
+	let "prodlet=num1*num2"
+
+	prodExp=$(expr $num1 \* $num2)
+
+	echo 'Let : '
+	echo $prodlet 
+	echo 'Expr : '
+	echo $prodExp
+	echo 'BC : '
+	echo $num1 \* $num2 | bc
+
+7.generate Fibonacci series.
+
+
+	read N
+  a=0
+   b=1
+    echo "The Fibonacci series is : " 
+    for (( i=0; i<N; i++ ))
+     do
+      echo -n "$a "
+       fn=$((a + b))
+       a=$b 
+       b=$fn
+  done 
+
+
+8. Write a shell script to reverse the single strings. 
+
+	echo 'Enter a string : '
+	read str
+	rev=""
+	len=${#str}
+	for (( i=$len; i>0; i-- ))
+	do
+		temp=$(expr $str | cut -c $i)
+		rev=$rev$temp
+	done
+
+	echo $rev
+
+9.Write a shell script to reverse the list of strings and reverse each string further in the list.
+
+	read N
+
+for((i=0;i<N;i++))
 do
-        mkdir "a$i"
+    read x
+   a[i]=$x
 done
 
+echo ${a[@]} | rev
 
-2.Write a menu based script to perform following string operations
-a) To find length of a string
-str="Subham"
-echo :wq
-echo len=${#str}
+10. Write a shell script to print the reverse of an input number.
 
-c) Copying string
-str="Subham"
-echo "abc=$str"
-
-d) Concatenation of strings
-
-str1="Tushar"
-str2="More\n"
-str3="subham"
-str4="singh\"
-echo -e str5= $str1 $str2  $str3 $str4
-
-e) Compare two strings
-str1="subham"
-str2="subham"
-if(($str1 = $str2)); then
-echo "equal"
-else
-echo "not equal"
-fi
+	echo 'Enter a number : '
+	read num
+	n=$num
+	sum=0
+	rem=0
+	while (( $n > 0 ))
+	do
+		rem=`expr $n % 10`
+		sum=`expr $sum \* 10`
+		sum=`expr $sum + $rem`
+		n=`expr $n / 10`
+	done
+	echo 'Reverse : ' $sum

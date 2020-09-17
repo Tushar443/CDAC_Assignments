@@ -1,36 +1,80 @@
-Create different types of Files.
+1. 
+ANS:
 
-thunder@thunderstrom:~$ touch a1.text
-thunder@thunderstrom:~$ touch A1.text
-thunder@thunderstrom:~$ touch A!.Text
--bash: !.Text: event not found
-thunder@thunderstrom:~$ touch A1.Text
-thunder@thunderstrom:~$ touch A1.TEXT
+#include <iostream> 
+#include <sys/types.h> 
+#include <unistd.h> 
+#include <stdlib.h> 
+using namespace std; 
+int main() { 
+	pid_t pid; 
+	cout << "Before fork!!!!!" << endl;
+	pid = fork(); 
+	if(pid==0) { 
+		cout <<"this is child process:" << getpid() <<"  " << getppid() <<  endl; 
+		execv("/bin/date", "date", NULL);
+		cout << endl << "-----------------------------" << endl;		
+		exit(0);
+	exit(0); 
+
+	} else if(pid>0) { 
+		cout << "this is parent process:" << getpid()<< "  "  << getppid() << endl; 
+		execl("/bin/date", "date", NULL);
+		exit(0);
+	}
+	else { 
+		cout << "process is not created" << endl; 
+	} 
+exit(0);
+return 0;
+} 
 
 
-thunder@thunderstrom:~$ touch A1.text.text
-thunder@thunderstrom:~$ touch A1.text.html
-thunder@thunderstrom:~$ cat >A1.text.js
-this file is created using cat command
 
-thunder@thunderstrom:~$ ls
-A1.TEXT  A1.Text  A1.text  A1.text.html  A1.text.js  A1.text.text  a1.text
-thunder@thunderstrom:~$ touch .a1.text
 
-thunder@thunderstrom:~$ touch .b1
-thunder@thunderstrom:~$ ls -l
-total 0
--rw-rw-rw- 1 thunder thunder  0 Sep  7 20:50 A1.TEXT
--rw-rw-rw- 1 thunder thunder  0 Sep  7 20:50 A1.Text
--rw-rw-rw- 1 thunder thunder  0 Sep  7 20:49 A1.text
--rw-rw-rw- 1 thunder thunder  0 Sep  7 20:53 A1.text.html
--rw-rw-rw- 1 thunder thunder 39 Sep  7 20:54 A1.text.js
--rw-rw-rw- 1 thunder thunder  0 Sep  7 20:52 A1.text.text
--rw-rw-rw- 1 thunder thunder  0 Sep  7 20:49 a1.text
-thunder@thunderstrom:~$ ls -a
-.   .a1.text  .bash_history  .bashrc     .motd_shown  .sudo_as_admin_successful  A1.Text  A1.text.html  A1.text.text
-..  .b1       .bash_logout   .landscape  .profile     A1.TEXT                    A1.text  A1.text.js    a1.text
+2.
 
-thunder@thunderstrom:~$ touch A1.text.html.js.cpp
-thunder@thunderstrom:~$ ls
-A1.TEXT  A1.Text  A1.text  A1.text.html  A1.text.html.js.cpp  A1.text.js  A1.text.text  a1.text
+ANS:
+
+#include <iostream>
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sched.h>
+
+using namespace std;
+int main()
+{
+    pid_t pid;
+    cout << "Before fork!!!!!" << endl;
+    pid = fork();
+    if (pid == 0)
+    {
+        // cout << pid << endl;
+        cout << "This is child process. Process ID: " << getpid() << "  "
+             << "Parent ID: " << getppid() << "  "
+             << "Scheduling Policy Status: "
+             << sched_getscheduler(pid) << endl;
+
+        // execl("/bin/date", "date", NULL);
+        cout << endl
+             << "-----------------------------" << endl;
+        exit(0);
+    }
+    else if (pid > 0)
+    {
+        //  cout << pid << endl;
+        cout << "this is parent process:" << getpid() << "  "
+             << "Parent ID: " << getppid() << "  "
+             << "Scheduling Policy Status: "
+             << sched_getscheduler(pid) << endl;
+        // execl("/bin/date", "date", NULL);
+        exit(0);
+    }
+    else
+    {
+        cout << "process is not created" << endl;
+    }
+    exit(0);
+    return 0;
+}
