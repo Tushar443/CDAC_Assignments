@@ -5,19 +5,29 @@ public static void main(String[] args) {
     char mf = sc.next().charAt(0);
     int age =sc.nextInt();
 
-    if(mf == 'm' || mf == 'M'){
+    // if(mf == 'm' || mf == 'M'){
+    //     if(age >= 22){
+    //         System.out.println("Eligible for Marriage");
+    //     }else{
+    //         System.out.println("NOT Eligible for Marriage");
+    //     }
+    // }
+    // else{
+    //     if(age >= 18){
+    //         System.out.println("Eligible for Marriage");
+    //     }else{
+    //         System.out.println("NOT Eligible for Marriage");
+    //     }
+    // }
+
+if((mf == 'm' || mf == 'M') || (mf == 'f' || mf == 'F')){
         if(age >= 22){
             System.out.println("Eligible for Marriage");
         }else{
             System.out.println("NOT Eligible for Marriage");
         }
     }
-    else{
-        if(age >= 18){
-            System.out.println("Eligible for Marriage");
-        }else{
-            System.out.println("NOT Eligible for Marriage");
-        }
-    }
+    
+
 }
 }
