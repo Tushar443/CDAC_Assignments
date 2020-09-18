@@ -5,14 +5,22 @@ public class Prime_Given{
         int x = sc.nextInt();
         int y =sc.nextInt();
         int z;
-        flag=true;
+        boolean flag=true;
+        if (x == 0 || x==1 || x==2){
+            x=3;
+        }
         for(int i=x;i<=y;i++){
+            if(i==1){
+                continue;
+            }
             z=i/2;
             for(int j=2;j<=z;j++){
                 if (i%j == 0){
-                    continue;
-                }else{
                     flag=false;
+                    break;
+                }else{
+                    flag=true;
+                   continue;
                 }
             }
             if(flag){
