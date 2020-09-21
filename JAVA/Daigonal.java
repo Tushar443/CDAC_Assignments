@@ -8,17 +8,17 @@ public class Daigonal{
                 arr[i][j]=sc.nextInt();
             }
         }
-
+        int sum =0;
         System.out.println("@@@@@@@@@@@@@@@@@@@@");
         for(int x=0;x<arr.length;x++){
             for(int y=0 ;y<arr[x].length;y++){
                 if(x!=y){
-                    System.out.print("  ");
+                    continue;
                 }else{
-                    System.out.print(arr[x][y]+ "  ");                    
+                   sum=sum+arr[x][y];                    
                 }
             }
-            System.out.println();
         }
+        System.out.println("Sum is : "+sum);
     }
 }
