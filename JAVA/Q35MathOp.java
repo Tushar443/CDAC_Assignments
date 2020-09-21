@@ -9,10 +9,10 @@ public class Q35MathOp {
        int subtractValue = MathOperation.subtract(x,y);
        int multiplyValue = MathOperation.multiply(x,y);
        int powerValue = MathOperation.power(x,y);
-       System.out.println(addValue);
-       System.out.println(subtractValue);
-       System.out.println(multiplyValue);
-       System.out.println(powerValue);
+       System.out.println("Sum is : "+addValue);
+       System.out.println("Subtraction : "+subtractValue);
+       System.out.println("Multiplicaion : "+multiplyValue);
+       System.out.println("Power : "+powerValue);
     }
 }
 
