@@ -1,5 +1,5 @@
 import java.util.*;
-public class AdditionCasting{
+public class Q4AdditionCasting{
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         byte a =(byte)sc.nextInt();

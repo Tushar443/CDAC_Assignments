@@ -1,5 +1,5 @@
 import java.util.*;
-public class Radius {
+public class Q6Radius {
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         System.out.print("Enter Radius : ");

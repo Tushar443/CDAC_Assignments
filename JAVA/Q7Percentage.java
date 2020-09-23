@@ -1,5 +1,5 @@
 import java.util.*;
-public class Percentage{
+public class Q7Percentage{
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter 5 Subject Marks");

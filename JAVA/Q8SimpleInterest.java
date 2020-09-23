@@ -1,5 +1,5 @@
 import java.util.*;
-public class SimpleInterest{
+public class Q8SimpleInterest{
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter the Principal Amount");
