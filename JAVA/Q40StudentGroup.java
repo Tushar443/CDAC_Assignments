@@ -12,37 +12,10 @@ public class Q40StudentGroup{
             Student s =new Student(rno,name,age,score);
             arr[i]=s;
         }
-         System.out.print("0 to 50 : ");
-            for(Student s : arr){
-                if(s.getScore() <= 50 && s.getScore() > 0){
-                System.out.println(s.getScore());
-            }
+
+        for(Student x : arr){
+           x.ScoreGroup(x.getScore());
         }
-        System.out.println();
-         System.out.print("50 to 65 : ");
-        for(Student s : arr){
-           
-            if(s.getScore() <= 65 && s.getScore() > 50){
-                System.out.println(s.getScore());
-            }
-        }
-        System.out.println();
-         System.out.print("65 to 80 : ");
-        for(Student s : arr){
-           
-            if(s.getScore() <=80 && s.getScore() > 65){
-                System.out.println(s.getScore());
-            }
-        }
-        System.out.println();
-         System.out.print("80 to 100 : ");
-        for(Student s : arr){
-           
-            if(s.getScore() <= 100 && s.getScore() > 80){
-                System.out.println(s.getScore());
-            }
-        }
-        System.out.println();
     }
 }
 
@@ -61,7 +34,19 @@ class Student{
     public int getScore(){
         return this.score;
     }
-    public void show(){
-        System.out.println("Roll no : "+ rno + " name is : " + name);
+    void ScoreGroup(int Score){ 
+        System.out.println("@@@@@@@@@@@@@@@@");
+        if(Score<50){ 
+            System.out.println("Grade F"); 
+        }else if(Score>=50 && Score<65 ){
+            System.out.println("Grade C"); 
+        }else if(Score>=65 && Score<80 ){ 
+            System.out.println("Grade B"); 
+        }else if(Score>=80 && Score<=100){ 
+            System.out.println("Grade A"); 
+        } 
     }
+    // public void show(){
+    //     System.out.println("Roll no : "+ rno + " name is : " + name);
+    // }
 }
