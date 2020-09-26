@@ -2,19 +2,21 @@ class OneBHk{
     private int roomArea;
     private int hallArea;
     private double price;
+    private static double totalAmt=0;
     OneBHk(){
         this.roomArea=0;
         this.hallArea=0;
         this.price=0.0;
     }
     OneBHk(int roomArea ,int hallArea,double price){
+        this.totalAmt=this.totalAmt+price;
         this.roomArea=roomArea;
         this.hallArea=hallArea;
         this.price=price;
     }
     public void show(){
         System.out.println("Room Area "+ this.roomArea+ " Hall Area "
-        +this.hallArea + " Price "+ this.price);
+        +this.hallArea + " Price "+ this.price +" Total Amt of all flats "+ this.totalAmt);
     }
 }
 class TwoBHK extends OneBHk{
