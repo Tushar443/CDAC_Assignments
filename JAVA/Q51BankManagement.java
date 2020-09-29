@@ -148,5 +148,4 @@ public class Q51BankManagement{
             }
         }
     }
-    // sc.close();
 }
