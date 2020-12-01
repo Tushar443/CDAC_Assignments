@@ -13,9 +13,9 @@ namespace Assignment1
             Employee o;
             o = new Employee();
             Console.WriteLine(o.EmpNo);
-            Employee o1 = new Employee("Amol", 123465, 10);
-            Employee o2 = new Employee("Amol", 123465);
-            Employee o3 = new Employee("Amol");    
+            Employee o1 = new Employee("tushar", 123465, 10);
+            Employee o2 = new Employee("rohit", 123465);
+            Employee o3 = new Employee("kishor");    
             Employee o4 = new Employee();
             
             Console.WriteLine(o1.EmpNo); 
