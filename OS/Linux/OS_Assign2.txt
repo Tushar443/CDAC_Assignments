@@ -1,0 +1,96 @@
+1)
+for ((i=1;i<=10;i++))
+do
+        mkdir "a$i"
+done
+
+
+2.Write a menu based script to perform following string operations
+echo "Enter the string"
+read str flag=true;
+while $flag 
+do 
+echo "1)length"
+echo "2)copy" 
+echo "3)concat" 
+echo "4)compare" 
+echo "5)rev" 
+read x;
+case $x in 
+  1) echo "${#str}";;
+  2)
+     echo $str str2=$str
+     echo $str2 ;; 
+  3) echo "Enter the string" 
+     read str1
+     echo "$str$str1";; 
+  4) echo "Enter the string for comparision" read str1
+     if (($str=$str1)) then echo "Match" else echo "Not match" fi ;;
+  5)echo $str | rev;; 
+  *) echo "You exit from game" flag=false;; 
+esac
+ done 
+
+ ########Fibonacci
+ read N
+  a=0
+   b=1
+    echo "The Fibonacci series is : " 
+    for (( i=0; i<N; i++ ))
+     do
+      echo -n "$a "
+       fn=$((a + b))
+       a=$b 
+       b=$fn
+  done 
+
+5
+0 1 1 2 3 5
+
+Q 9
+
+read N
+
+for((i=0;i<N;i++))
+do
+    read x
+   a[i]=$x
+done
+
+echo ${a[@]} | rev
+
+10)
+ read N
+
+echo $N | rev
+
+
+
+@@@@Password 
+
+echo "enter the password"
+ read password
+  len="${#password}" 
+  if  [ $len -ge 8 ]  
+    then 
+        echo "$password" | grep -q [0-9] 
+    if [ $? -eq 0 ]  
+        then
+             echo "$password" | grep -q [A-Z] 
+        if [ $? -eq 0 ]  
+            then
+                 echo "$password" | grep -q [a-z]
+            if [ $? -eq 0 ]  
+                then 
+                    echo "$password" | grep -q [$,@,\#,%]
+                if [ $? -eq 0 ]  
+                    then echo "Strong password"
+                else echo "weak password include special chars"
+                fi 
+            else echo "weak password include lower case char" 
+            fi
+        else echo "weak password include capital char" 
+        fi 
+    else echo "please include"
+    fi
+fi

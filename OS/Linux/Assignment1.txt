@@ -1,0 +1,138 @@
+Question 1 =>
+date
+date +%a
+date +%A
+date +%b
+date +%B
+date +%d
+date +%D
+date +%Y
+date +%T
+date +%A" "%d" "%B" "%Y
+date +%a" "%d" "%B" "%Y
+date +%A" "%d" "%B" "%Y" "%T
+
+cal
+cal oct 2020
+cal 2024
+cal -m9 1
+cal -m9 2020
+cal -3
+cal -2
+
+echo
+echo "Thunder store"
+echo -e "Thunder \bstore"
+echo -e "Thunder \nstore"
+echo -e "Thunder \tstore"
+echo *
+
+who
+whoami
+whoami --version
+logname
+uname -a
+uname
+uname -r
+uname -s
+uname -n
+uname -v
+uname -m
+uname -p
+uname -i
+
+
+seq 8
+seq 8 20 
+seq 8 3 20 
+seq -s " " 7
+seq -w 100
+
+clear
+ctrl+l
+
+Question 2
+
+tree 
+mkdir a b c
+touch a/a.txt b/b.txt c/c.txt
+cp -r  c  a
+mv b c
+alias thunder="ls -lh"
+mv a cdac
+
+cat > file1.txt
+Thunder Stromw
+
+cat > file2.txt
+
+cat > file3.txt
+cat > file4.txt
+cat > file5.txt
+
+grep s *
+
+
+touch file1.txt file2.txt file3.txt file4.txt file5.txt
+
+rm -r cdac c
+
+   grep s *
+   cat file1.txt
+   tree
+   rm -r cdac b c
+   ls
+   tree
+   vi file6.txt
+   cd De
+   cd Desktop/
+   cd Li
+   cd Linux/
+   ls
+   ls -l
+   chmod 700 sep
+   ls -l
+   chmod u=rw sep
+   ls -l
+   chmod ugo=rw sep
+   ls -l
+   chmod ugo=rwx sep
+   ls -l
+   chmod ugo+rwx sep
+   chmod ugo+r sep
+   ls -l
+   chmod ugo+r subham
+   chmod ugo+r Subham
+   ls -l
+   vi d.sh
+ chmod +x d.sh
+   ./d.sh
+   ls -l
+   chmod u=x d.sh
+   ls -l
+   ./d.sh
+   chmod u=e d.sh
+   chmod u=r d.sh
+   ./d.sh
+   ls -l
+   pwd
+   cd ..
+   pwd
+   cd etc/
+   ls
+   tree
+   ls
+   echo *.config
+   echo *.conf
+   cd ..
+   ls
+   cd Desktop/
+   cd Linux/
+   ls
+   cat file1,txt
+   cat file1.txt
+   echo 'Shwetalana' >>file1.txt
+   cat file1.txt
+   histoyr
+   histoy
+   history
